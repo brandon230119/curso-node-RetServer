@@ -23,11 +23,13 @@ class Server {
         this.app.use (express.json ()); 
 
         //Directorio Publico
-        this.app.use( express.static("public"));
+        this.app.use('/error', express.static("public"));
     }
 
     routes(){
-        
+
+        this.app.use('/', require('../routes/principal'));
+
         this.app.use(this.usuariosPath, require('../routes/usuarios'));
     }
 
