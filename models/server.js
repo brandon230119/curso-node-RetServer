@@ -20,7 +20,7 @@ class Server {
         this.app.use( cors() );
 
         //Lectura y parseo del cors
-        this.app.use (express.json ());
+        this.app.use (express.json ()); 
 
         //Directorio Publico
         this.app.use( express.static("public"));
