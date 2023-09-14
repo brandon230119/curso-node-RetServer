@@ -7,11 +7,13 @@ const dbConnection = async () =>{
     try {
 
         await mongoose.connect(process.env.MONGODB_CN, {
-            useNewUrlParse: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false
+            // useNewUrlParse: true,
+            // useUnifiedTopology: true,
+            // useCreateIndex: true,
+            //useFindAndModify: false
         });
+
+        console.log('Base de datos online');
 
     }catch (error) {
         console.log(error);
