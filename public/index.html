@@ -24,8 +24,6 @@
          data-logo_alignment="left">
       </div>
 
-      <script src="https://accounts.google.com/gsi/client" async defer></script>
-
       <button id="google_SingOut">
             singout
       </button>
@@ -60,9 +58,12 @@
             google.accounts.id.revoke(localStorage.getItem('email'), done =>{
                 localStorage.clear();
                 location.reload();
-            })
+            });
             
         }
       </script>
+
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 </body>
 </html>
